@@ -29,7 +29,6 @@ async function handleSearch(event) {
     return;
   }
 
-  // limpa resultados anteriores
   resultsList.innerHTML = "";
   books = [];
   showMessage("Carregando...");
@@ -64,7 +63,6 @@ function showMessage(text, isError = false) {
   message.className = isError ? "error" : "";
 }
 
-// Transforma lista em texto legível; retorna "Não informado" se vazia
 function formatList(list, max = MAX_LIST_ITEMS) {
   if (!list || list.length === 0) {
     return "Não informado";
