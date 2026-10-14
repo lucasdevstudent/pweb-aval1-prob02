@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta de Livros</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Consulta de Livros</h1>
+  </header>
+
+  <main>
+    <form id="search-form">
+      <div class="field">
+        <label for="search-type">Pesquisar por</label>
+        <select id="search-type">
+          <option value="title">Título</option>
+          <option value="author">Autor</option>
+        </select>
+      </div>
+
+      <div class="field grow">
+        <label for="search-text">Termo da pesquisa</label>
+        <input type="text" id="search-text" placeholder="Ex.: Dom Casmurro" required>
+      </div>
+
+      <button type="submit" id="search-button">Pesquisar</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <ul id="results"></ul>
+  </main>
+
+  <dialog id="details" aria-labelledby="details-title">
+    <h2 id="details-title"></h2>
+    <div id="details-content"></div>
+    <button type="button" id="close-button">Fechar</button>
+  </dialog>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
